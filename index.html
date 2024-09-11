@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Arte Déco - Poder e Luxo</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial Black', sans-serif;
+        }
 
+        header {
+            background-color: #000;
+            color: #d4af37;
+            text-align: center;
+            padding: 3rem;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        header h1 {
+            font-size: 5rem;
+            letter-spacing: 10px;
+            text-shadow: 5px 5px #333;
+        }
+
+        /* Formas geométricas agressivas no cabeçalho */
+        header::before, header::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: #d4af37;
+        }
+
+        header::before {
+            top: 0;
+            left: 0;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
+
+        header::after {
+            top: 0;
+            right: 0;
+            clip-path: polygon(100% 0, 100% 100%, 0 0);
+        }
+
+        nav {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        nav a {
+            font-size: 2rem;
+            text-decoration: none;
+            color: #d4af37;
+            margin: 0 2rem;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            border: 3px solid #d4af37;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #d4af37;
+            color: #000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+            text-transform: uppercase;
+        }
+
+        /* Texto estilizado agressivo */
+        .decorative-text {
+            font-size: 2.5rem;
+            color: #ff4c4c;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        /* Formas geométricas agressivas */
+        .geometric-shape {
+            width: 300px;
+            height: 300px;
+            margin: 3rem auto;
+            background: linear-gradient(45deg, #d4af37, #ff4c4c);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+
+        /* Sessão de produtos */
+        .product-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .product {
+            width: 30%;
+            background-color: #222;
+            border: 5px solid #d4af37;
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 5px solid #ff4c4c;
+        }
+
+        .product h3 {
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            text-transform: uppercase;
+        }
+
+        .product p {
+            font-size: 1.3rem;
+            color: #ddd;
+        }
+
+        .product .price {
+            font-size: 1.8rem;
+            color: #ff4c4c;
+            margin: 1rem 0;
+        }
+
+        .product button {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .product button:hover {
+            background-color: #d4af37;
+            color: #000;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Loja Arte Déco</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+        <a href="#">Carrinho</a>
+    </nav>
+
+    <div class="container">
+        <h2>Poder e Sofisticação em Cada Detalhe</h2>
+        <p class="decorative-text">Design Que Impõe Presença</p>
+
+        <!-- Forma geométrica decorativa -->
+        <div class="geometric-shape"></div>
+
+        <!-- Sessão de produtos -->
+        <div class="product-section">
+            <div class="product">
+                <img src="https://example.com/produto1.jpg" alt="Produto Art Déco 1">
+                <h3>Escultura Futurista</h3>
+                <p>Uma peça impactante que traz o futuro ao presente.</p>
+                <p class="price">R$ 1.200,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <img src="https://example.com/prod
