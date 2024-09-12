@@ -1,205 +1,134 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Arte Déco - Poder e Luxo</title>
+    <title>Skincare Elegante</title>
     <style>
         body {
-            background-color: #121212;
-            color: #fff;
+            font-family: 'Arial', sans-serif;
+            background-color: #eae4d6; /* Cor bege claro da paleta */
+            color: #333;
             margin: 0;
             padding: 0;
-            font-family: 'Arial Black', sans-serif;
         }
 
         header {
-            background-color: #000;
-            color: #d4af37;
+            background-color: #2a4239; /* Verde escuro da paleta */
+            padding: 20px;
             text-align: center;
-            padding: 3rem;
-            position: relative;
-            text-transform: uppercase;
+            color: #fff;
         }
 
         header h1 {
-            font-size: 5rem;
-            letter-spacing: 10px;
-            text-shadow: 5px 5px #333;
-        }
-
-        /* Formas geométricas agressivas no cabeçalho */
-        header::before, header::after {
-            content: '';
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background-color: #d4af37;
-        }
-
-        header::before {
-            top: 0;
-            left: 0;
-            clip-path: polygon(0 0, 100% 0, 0 100%);
-        }
-
-        header::after {
-            top: 0;
-            right: 0;
-            clip-path: polygon(100% 0, 100% 100%, 0 0);
-        }
-
-        nav {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        nav a {
-            font-size: 2rem;
-            text-decoration: none;
-            color: #d4af37;
-            margin: 0 2rem;
-            padding: 0.5rem 1rem;
-            background-color: #333;
-            border: 3px solid #d4af37;
-            transition: all 0.3s ease-in-out;
-        }
-
-        nav a:hover {
-            background-color: #d4af37;
-            color: #000;
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem;
-            text-align: center;
-        }
-
-        .container h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #d4af37;
-            text-transform: uppercase;
-        }
-
-        /* Texto estilizado agressivo */
-        .decorative-text {
-            font-size: 2.5rem;
-            color: #ff4c4c;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-        }
-
-        /* Formas geométricas agressivas */
-        .geometric-shape {
-            width: 300px;
-            height: 300px;
-            margin: 3rem auto;
-            background: linear-gradient(45deg, #d4af37, #ff4c4c);
-            clip-path: polygon(0 0, 100% 0, 50% 100%);
-        }
-
-        /* Sessão de produtos */
-        .product-section {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
-            margin-top: 2rem;
+            margin: 20px auto;
+            max-width: 1200px;
         }
 
         .product {
-            width: 30%;
-            background-color: #222;
-            border: 5px solid #d4af37;
-            text-align: center;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .product:hover {
-            transform: scale(1.05);
+            background-color: #fff;
+            border: 1px solid #d3b38d; /* Bege médio da paleta */
+            width: 300px;
+            margin: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .product img {
             width: 100%;
             height: auto;
-            border-bottom: 5px solid #ff4c4c;
         }
 
-        .product h3 {
-            font-size: 2rem;
-            margin: 1.5rem 0;
-            text-transform: uppercase;
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #2a4239;
         }
 
         .product p {
-            font-size: 1.3rem;
-            color: #ddd;
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #8a725a; /* Cor de bronze da paleta */
         }
 
-        .product .price {
-            font-size: 1.8rem;
-            color: #ff4c4c;
-            margin: 1rem 0;
-        }
-
-        .product button {
-            background-color: #ff4c4c;
-            color: white;
+        .btn {
+            background-color: #cfa074; /* Botões dourados */
+            color: #fff;
+            padding: 10px 20px;
             border: none;
-            padding: 0.7rem 1.5rem;
-            font-size: 1.3rem;
-            text-transform: uppercase;
+            border-radius: 5px;
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            transition: background-color 0.3s ease;
         }
 
-        .product button:hover {
-            background-color: #d4af37;
-            color: #000;
+        .btn:hover {
+            background-color: #b98960;
         }
 
         footer {
-            background-color: #000;
-            color: white;
+            background-color: #2a4239;
+            padding: 10px;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
+
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Loja Arte Déco</h1>
-    </header>
+<header>
+    <h1>Elegance Skincare</h1>
+</header>
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Produtos</a>
-        <a href="#">Contato</a>
-        <a href="#">Carrinho</a>
-    </nav>
+<div class="container">
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300" alt="Produto 1">
+        <div class="product-info">
+            <h2>Sérum Facial Hidratante</h2>
+            <p>Deixa sua pele radiante e hidratada o dia todo.</p>
+            <button class="btn">Comprar Agora</button>
+        </div>
+    </div>
 
-    <div class="container">
-        <h2>Poder e Sofisticação em Cada Detalhe</h2>
-        <p class="decorative-text">Design Que Impõe Presença</p>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300" alt="Produto 2">
+        <div class="product-info">
+            <h2>Creme Anti-Idade</h2>
+            <p>Reduz rugas e linhas de expressão.</p>
+            <button class="btn">Comprar Agora</button>
+        </div>
+    </div>
 
-        <!-- Forma geométrica decorativa -->
-        <div class="geometric-shape"></div>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300" alt="Produto 3">
+        <div class="product-info">
+            <h2>Máscara Revitalizante</h2>
+            <p>Revigore sua pele com ingredientes naturais.</p>
+            <button class="btn">Comprar Agora</button>
+        </div>
+    </div>
+</div>
 
-        <!-- Sessão de produtos -->
-        <div class="product-section">
-            <div class="product">
-                <img src="https://example.com/produto1.jpg" alt="Produto Art Déco 1">
-                <h3>Escultura Futurista</h3>
-                <p>Uma peça impactante que traz o futuro ao presente.</p>
-                <p class="price">R$ 1.200,00</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <img src="https://example.com/prod
+<footer>
+    <p>&copy; 2024 Elegance Skincare. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
