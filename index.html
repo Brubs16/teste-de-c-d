@@ -7,14 +7,15 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #eae4d6; /* Cor bege claro da paleta */
+            background-color: #eae4d6;
             color: #333;
             margin: 0;
             padding: 0;
         }
 
+        /* Estilos do Header */
         header {
-            background-color: #2a4239; /* Verde escuro da paleta */
+            background-color: #2a4239;
             padding: 20px;
             text-align: center;
             color: #fff;
@@ -35,7 +36,7 @@
             transform: translate(-50%, -50%);
             width: 120px;
             height: 120px;
-            border: 5px solid #cfa074; /* Formato geométrico dourado */
+            border: 5px solid #cfa074;
             border-radius: 50%;
             z-index: 0;
         }
@@ -43,6 +44,36 @@
         header h1 {
             position: relative;
             z-index: 1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px;
+            border-bottom: 1px solid #d3b38d;
+        }
+
+        .navbar a {
+            color: #2a4239;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #cfa074;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
 
         .container {
@@ -55,7 +86,7 @@
 
         .product {
             background-color: #fff;
-            border: 1px solid #d3b38d; /* Bege médio da paleta */
+            border: 1px solid #d3b38d;
             width: 300px;
             margin: 15px;
             border-radius: 8px;
@@ -76,7 +107,7 @@
             left: -20px;
             width: 50px;
             height: 50px;
-            border: 3px solid #cfa074; /* Pequeno triângulo dourado */
+            border: 3px solid #cfa074;
             clip-path: polygon(0 0, 100% 0, 0 100%);
         }
 
@@ -94,11 +125,11 @@
         .product p {
             font-size: 16px;
             margin-bottom: 15px;
-            color: #8a725a; /* Cor de bronze da paleta */
+            color: #8a725a;
         }
 
         .btn {
-            background-color: #cfa074; /* Botões dourados */
+            background-color: #cfa074;
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -118,6 +149,35 @@
             margin-top: 40px;
         }
 
+        /* Adição de formas geométricas nas seções */
+        .shapes {
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .shapes::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            border: 5px solid #cfa074;
+            border-radius: 50%;
+        }
+
+        .shapes::after {
+            content: "";
+            position: absolute;
+            top: 200px;
+            right: 5%;
+            width: 80px;
+            height: 80px;
+            border: 5px solid #cfa074;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
+
+        /* Estilos do Rodapé */
         footer {
             background-color: #2a4239;
             padding: 10px;
@@ -134,7 +194,7 @@
             transform: translateX(-50%);
             width: 120px;
             height: 5px;
-            background-color: #cfa074; /* Barra dourada no topo do rodapé */
+            background-color: #cfa074;
         }
     </style>
 </head>
@@ -144,8 +204,21 @@
     <h1>Elegance Skincare</h1>
 </header>
 
+<!-- Barra de navegação -->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#products">Produtos</a>
+    <a href="#about">Sobre Nós</a>
+    <a href="#contact">Contato</a>
+    <div class="cart">
+        <img src="https://via.placeholder.com/24" alt="Carrinho" class="cart-icon">
+        <a href="#cart">Carrinho</a>
+    </div>
+</div>
+
 <h2 class="section-title">Nossos Produtos Premium</h2>
 
+<!-- Container dos Produtos -->
 <div class="container">
     <div class="product">
         <img src="https://via.placeholder.com/300x300" alt="Produto 1">
@@ -183,6 +256,9 @@
         </div>
     </div>
 </div>
+
+<!-- Formas geométricas decorativas -->
+<div class="shapes"></div>
 
 <footer>
     <p>&copy; 2024 Elegance Skincare. Todos os direitos reservados.</p>
