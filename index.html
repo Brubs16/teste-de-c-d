@@ -18,18 +18,38 @@
             padding: 20px;
             text-align: center;
             color: #fff;
+            position: relative;
         }
 
         header h1 {
             font-family: 'Georgia', serif;
             letter-spacing: 2px;
+            font-size: 36px;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            border: 5px solid #cfa074; /* Formato geométrico dourado */
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 1;
         }
 
         .container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 20px auto;
+            margin: 40px auto;
             max-width: 1200px;
         }
 
@@ -41,11 +61,23 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .product img {
             width: 100%;
             height: auto;
+        }
+
+        .product::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 50px;
+            height: 50px;
+            border: 3px solid #cfa074; /* Pequeno triângulo dourado */
+            clip-path: polygon(0 0, 100% 0, 0 100%);
         }
 
         .product-info {
@@ -54,7 +86,7 @@
         }
 
         .product h2 {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 10px;
             color: #2a4239;
         }
@@ -79,16 +111,31 @@
             background-color: #b98960;
         }
 
+        .section-title {
+            font-size: 28px;
+            color: #2a4239;
+            text-align: center;
+            margin-top: 40px;
+        }
+
         footer {
             background-color: #2a4239;
             padding: 10px;
             text-align: center;
             color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            position: relative;
         }
 
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background-color: #cfa074; /* Barra dourada no topo do rodapé */
+        }
     </style>
 </head>
 <body>
@@ -97,12 +144,14 @@
     <h1>Elegance Skincare</h1>
 </header>
 
+<h2 class="section-title">Nossos Produtos Premium</h2>
+
 <div class="container">
     <div class="product">
         <img src="https://via.placeholder.com/300x300" alt="Produto 1">
         <div class="product-info">
             <h2>Sérum Facial Hidratante</h2>
-            <p>Deixa sua pele radiante e hidratada o dia todo.</p>
+            <p>Com uma fórmula única enriquecida com ácido hialurônico e vitaminas, este sérum promove uma hidratação profunda e restaura o brilho natural da sua pele.</p>
             <button class="btn">Comprar Agora</button>
         </div>
     </div>
@@ -111,7 +160,7 @@
         <img src="https://via.placeholder.com/300x300" alt="Produto 2">
         <div class="product-info">
             <h2>Creme Anti-Idade</h2>
-            <p>Reduz rugas e linhas de expressão.</p>
+            <p>Com uma mistura poderosa de colágeno e retinol, nosso creme anti-idade combate os sinais do envelhecimento, suavizando rugas e linhas de expressão.</p>
             <button class="btn">Comprar Agora</button>
         </div>
     </div>
@@ -120,7 +169,16 @@
         <img src="https://via.placeholder.com/300x300" alt="Produto 3">
         <div class="product-info">
             <h2>Máscara Revitalizante</h2>
-            <p>Revigore sua pele com ingredientes naturais.</p>
+            <p>Feita com ingredientes naturais, como extrato de chá verde e aloe vera, esta máscara revitaliza sua pele, dando uma sensação de frescor e renovação.</p>
+            <button class="btn">Comprar Agora</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300" alt="Produto 4">
+        <div class="product-info">
+            <h2>Esfoliante Suave</h2>
+            <p>Esfoliante facial suave que remove as células mortas e impurezas, deixando sua pele mais macia e com textura renovada após o primeiro uso.</p>
             <button class="btn">Comprar Agora</button>
         </div>
     </div>
